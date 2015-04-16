@@ -18,16 +18,11 @@ import { Greeter, PinkPointBackend } from './services';
   directives: [For]
 })
 class HelloApp {
+  routes:any[];
+
   constructor(greeter: Greeter, backend: PinkPointBackend) {
     this.message = greeter.hello('Angular 2 app');
-    this.routes = [
-      {
-        "name": "asdf"
-      },
-      {
-        "name": "qwer"
-      }
-    ];
+
     backend.loadRoutes().then(res => {
      this.routes = res;
     });
