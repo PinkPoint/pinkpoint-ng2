@@ -1,0 +1,23 @@
+<h3>Add new route</h3>
+<form>
+    <label for="newRouteName">Route Name</label>
+    <input [control]="newRouteName" class="u-full-width" type="text" placeholder="route name" id="newRouteName">
+    <div class="row">
+        <div class="ten columns">
+            <label for="newRouteBuilder">Builder</label>
+            <input [control]="newRouteBuilder" class="u-full-width" type="text" placeholder="builder" id="newRouteBuilder">
+        </div>
+        <div class="two columns">
+            <label for="newRouteDifficulty">Difficulty</label>
+            <select [control]="newRouteDifficulty" class="u-full-width" id="newRouteDifficulty">
+                <option value="50">5a</option>
+                <option value="52">5b</option>
+                <option value="54">5c</option>
+                <option value="60">6a</option>
+                <option value="62">6b</option>
+                <option value="64">6c</option>
+            </select>
+        </div>
+    </div>
+    <input class="button-primary" type="submit" value="Add new route">
+</form>
