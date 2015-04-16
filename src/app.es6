@@ -8,11 +8,7 @@ import { Routes } from './pinkPointBackend';
   injectables: [Routes]
 })
 @View({
-  template: `
-  <div *for="#route of routes">
-    <p>{{route.name}}</p>
-  </div>
-  `,
+  templateUrl: 'routes.html',
   directives: [For]
 })
 class HelloApp {

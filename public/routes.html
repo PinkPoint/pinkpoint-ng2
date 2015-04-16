@@ -1,0 +1,16 @@
+<table class="u-full-width">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Difficulty</th>
+        <th>Builder</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *for="#route of routes">
+        <td>{{route.name}}</td>
+        <td>{{route.difficulty}}</td>
+        <td>{{route.builder}}</td>
+    </tr>
+    </tbody>
+</table>
