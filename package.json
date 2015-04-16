@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "angular2": "2.0.0-alpha.19",
-    "rtts_assert": "2.0.0-alpha.19"
+    "rtts_assert": "2.0.0-alpha.19",
+    "whatwg-fetch": "^0.7.0"
   }
 }
