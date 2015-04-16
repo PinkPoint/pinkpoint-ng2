@@ -2,11 +2,11 @@ import 'babel-core/polyfill';
 import { assert } from 'rtts_assert/rtts_assert';
 
 import { Component, View, bootstrap, For } from 'angular2/angular2';
-import { Greeter, PinkPointBackend } from './services';
+import PinkPointBackend from './pinkPointBackend';
 
 @Component({
   selector: 'hello-app',
-  injectables: [Greeter, PinkPointBackend]
+  injectables: [PinkPointBackend]
 })
 @View({
   template: `
@@ -18,8 +18,8 @@ import { Greeter, PinkPointBackend } from './services';
   directives: [For]
 })
 class HelloApp {
-  constructor(greeter: Greeter, backend: PinkPointBackend) {
-    this.message = greeter.hello('Angular 2 app');
+  constructor(backend: PinkPointBackend) {
+    this.message = "Hello World";
     this.routes = [
       {
         "name": "asdf"
