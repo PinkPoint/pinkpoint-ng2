@@ -7,11 +7,14 @@ import { RouteListComponent } from './routeListComponent';
     selector: 'pinkpoint-app'
 })
 @View({
-    template: `<routes></routes>`,
+    template: `
+        <h1>Pink Point</h1>
+        <routes></routes>
+    `,
     directives: [RouteListComponent]
 })
-class HelloApp {
+class PinkPointApp {
 }
 
-bootstrap(HelloApp);
+bootstrap(PinkPointApp);
 
