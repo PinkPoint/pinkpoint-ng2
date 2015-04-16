@@ -9,10 +9,12 @@ import { Routes } from './pinkPointBackend';
     templateUrl: 'routes.html',
     directives: [For]
 })
-export class RouteListComponent {
+class RouteListComponent {
     constructor(routes: Routes) {
         routes.all().then(res => {
             this.routes = res;
         });
     }
 }
+
+export { RouteListComponent }
