@@ -11,7 +11,7 @@ import { Greeter, PinkPointBackend } from './services';
 @View({
   template: `
   <p>{{message}}</p>
-  <div *for="#route in routes">
+  <div *for="#route of routes">
     <p>{{route.name}}</p>
   </div>
   `,
@@ -20,7 +20,14 @@ import { Greeter, PinkPointBackend } from './services';
 class HelloApp {
   constructor(greeter: Greeter, backend: PinkPointBackend) {
     this.message = greeter.hello('Angular 2 app');
-    this.routes = [];
+    this.routes = [
+      {
+        "name": "asdf"
+      },
+      {
+        "name": "qwer"
+      }
+    ];
     backend.loadRoutes().then(res => {
      this.routes = res;
     });
