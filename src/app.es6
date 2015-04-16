@@ -1,16 +1,14 @@
 import 'babel-core/polyfill';
 import { assert } from 'rtts_assert/rtts_assert';
-
 import { Component, View, bootstrap, For } from 'angular2/angular2';
-import { Greeter, PinkPointBackend } from './services';
+import { Routes } from './pinkPointBackend';
 
 @Component({
   selector: 'hello-app',
-  injectables: [Greeter, PinkPointBackend]
+  injectables: [Routes]
 })
 @View({
   template: `
-  <p>{{message}}</p>
   <div *for="#route of routes">
     <p>{{route.name}}</p>
   </div>
@@ -18,15 +16,10 @@ import { Greeter, PinkPointBackend } from './services';
   directives: [For]
 })
 class HelloApp {
-  routes:any[];
-
-  constructor(greeter: Greeter, backend: PinkPointBackend) {
-    this.message = greeter.hello('Angular 2 app');
-
-    backend.loadRoutes().then(res => {
+  constructor(routes: Routes) {
+    routes.all().then(res => {
      this.routes = res;
     });
-
   }
 }
 
