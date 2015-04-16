@@ -10,14 +10,14 @@
         <div class="two columns">
             <label for="newRouteDifficulty">Difficulty</label>
             <select [control]="newRouteDifficulty" class="u-full-width" id="newRouteDifficulty">
-                <option value="50">5a</option>
-                <option value="52">5b</option>
-                <option value="54">5c</option>
-                <option value="60">6a</option>
-                <option value="62">6b</option>
-                <option value="64">6c</option>
+                <option value="5a">5a</option>
+                <option value="5b">5b</option>
+                <option value="5c">5c</option>
+                <option value="6a">6a</option>
+                <option value="6b">6b</option>
+                <option value="6c">6c</option>
             </select>
         </div>
     </div>
-    <input class="button-primary" type="submit" value="Add new route">
+    <input class="button-primary" type="submit" value="Add new route" (click)="addNewRoute()">
 </form>

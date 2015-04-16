@@ -1,8 +1,7 @@
 import { Component, View, For } from 'angular2/angular2';
 import { bind} from 'angular2/di';
 import { Routes } from './pinkPointBackend';
-
-const SERVER_URL = 'http://projectpinkpoint.azurewebsites.net';
+import { SERVER_URL } from './config';
 
 @Component({
     selector: 'routes',
